@@ -1,0 +1,203 @@
+#mains {
+  width: 100%;
+  background: #F5F5F5;
+  height: 1500px;
+}
+
+.mains {
+  height: 1500px;
+}
+
+.mains .mains_t {
+  height: 48px;
+  line-height: 48px;
+}
+
+.mains .mains_t .mains_t_p1 {
+  width: 115px;
+  height: 24px;
+  font-size: 10px;
+  float: left;
+  text-align: center;
+  line-height: 24px;
+  background: #FFFFFF;
+  border: 1 solid #CCCCCC;
+  margin: 12px 10px 0 5px;
+}
+
+.mains .mains_t .mains_t_p2 {
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+  float: left;
+  text-align: center;
+  line-height: 24px;
+  border: 1 solid #CCCCCC;
+  margin: 12px 0 0 10px;
+}
+
+.mains .mains_t .mains_t_p3 {
+  width: 115px;
+  height: 24px;
+  font-size: 10px;
+  float: left;
+  text-align: center;
+  line-height: 24px;
+  background: #FFFFFF;
+  border: 1 solid #CCCCCC;
+  margin: 12px 0 0 10px;
+}
+
+.mains .mains_c {
+  height: 1400px;
+}
+
+.mains .mains_c .ma_l {
+  width: 200px;
+  float: left;
+}
+
+.mains .mains_c .ma_l .ma_ul1 h2 {
+  float: left;
+  width: 200px;
+  height: 38px;
+  background: white;
+  font-size: 12px;
+  line-height: 38px;
+}
+
+.mains .mains_c .ma_l .ma_ul1 .ma_li1 {
+  height: 50px;
+  width: 200px;
+  background: #FFFFFF;
+  float: left;
+}
+
+.mains .mains_c .ma_l .ma_ul1 .ma_li1 .ma_a1 {
+  height: 50px;
+  width: 55px;
+  float: left;
+  line-height: 50px;
+  margin-left: 20px;
+}
+
+.mains .mains_c .ma_l .ma_ul1 .ma_li1 .ma_p1 {
+  display: block;
+  height: 50px;
+  width: 40px;
+  float: left;
+  color: #C0C0C0;
+  line-height: 50px;
+}
+
+.mains .mains_c .ma_l .ma_l_b {
+  width: 200px;
+  margin-top: 10px;
+  float: left;
+  background: #FFFFFF;
+}
+
+.mains .mains_c .ma_l .ma_l_b #ml_goods {
+  width: 200px;
+  float: left;
+}
+
+.mains .mains_c .ma_l .ma_l_b #ml_goods li {
+  text-align: center;
+  width: 200px;
+  height: 280px;
+}
+
+.mains .mains_c .ma_l .ma_l_b #ml_goods li :nth-child(3) {
+  text-decoration: line-through;
+}
+
+.mains .mains_c .ma_l .ma_l_b #ml_goods li :nth-child(4) {
+  color: red;
+}
+
+.mains .mains_c .ma_r {
+  width: 977px;
+  height: 1380px;
+  float: left;
+  margin-left: 20px;
+}
+
+.mains .mains_c .ma_r .ma_r_px {
+  height: 55px;
+  width: 977px;
+  float: left;
+  background: #FFFFFF;
+}
+
+.mains .mains_c .ma_r .ma_r_px a {
+  width: 66px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  float: left;
+  color: #2B2B2B;
+}
+
+.mains .mains_c .ma_r .ma_r_px :hover {
+  background: #58BC58;
+  color: white;
+}
+
+.mains .mains_c .ma_r .ma_r_px :hover img {
+  transform: rotate(180deg);
+}
+
+.mains .mains_c .ma_r #mr_goods {
+  height: 1300px;
+  width: 977px;
+  float: left;
+}
+
+.mains .mains_c .ma_r #mr_goods li {
+  width: 230px;
+  height: 320px;
+  background: #FFFFFF;
+  float: left;
+  text-align: center;
+  margin: 10px 7px 0 7px;
+}
+
+.mains .mains_c .ma_r #mr_goods li img {
+  margin: 10px 0;
+}
+
+.mains .mains_c .ma_r #mr_goods li :nth-child(3) {
+  text-decoration: line-through;
+}
+
+.mains .mains_c .ma_r #mr_goods li :nth-child(4) {
+  color: red;
+}
+
+.mains .mains_c .ma_r #mr_goods li :nth-child(6) :nth-child(1) {
+  color: lightskyblue;
+}
+
+.mains .mains_c .page {
+  height: 40px;
+  width: 977px;
+  float: left;
+  background: yellow;
+}
+
+.mains .mains_c .page span {
+  display: inline-block;
+  float: left;
+  margin: 5px;
+  width: 40px;
+  line-height: 1.8;
+  text-align: center;
+  background-color: #dfdfdf;
+  color: #666;
+}
+
+.mains .mains_c .page span .active {
+  background-color: #fc0;
+  color: #fff;
+}

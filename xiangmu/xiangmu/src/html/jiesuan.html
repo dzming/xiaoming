@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jiesuan.css"/>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script src="../js/jiesuan.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		
+		<!--top-->
+		<div id="top">
+			<div class="top con">
+				<div class="top_l">
+					<p class="top_l_p1"><img src="../images/top_home.png"/></p>
+					<a href="../index.html">E宠首页</a>
+					<p class="top_l_p2"><a href="#">送至：</a></p>
+					<p class="top_l_p3">重庆 <img src="../images/top_jt.png"/></p>
+					<p class="top_l_p4"><img src="../images/top_tb.png"/><a href="#">E宠就是正品</a></p>
+					<p class="top_l_p5">评价<span>(908.4万)</span></p>
+				</div>
+				<ul class="top_r">
+					<li class="top_r1 gon"><a href="../html/login.html" class="top_r_a1">[登陆]</a></li>
+					<li class="top_r2 gon"><a href="../html/zhuce.html" class="top_r_a2">[注册]</a></li>
+					<li class="top_r3 gon">
+						<img src="../images/top_car.png" class="top_r_img1"/>
+						<a href="#" class="top_r_a3">购物车</a>
+						(<span style="color: red;" id="total_t">0</span>)
+					</li>
+					<li class="top_r4 gon">
+						<img src="../images/top_me.png" class="top_r_img2"/>
+						<a href="#" class="top_r_a4">我的E宠</a>
+						<img src="../images/top_xiabiao.png" class="top_r_img3"/>
+						<ul class="top_u1">
+							<li><a href="#" class="top_li">我的订单</a></li>
+							<li><a href="#" class="top_li">我的订单</a></li>
+							<li><a href="#" class="top_li">我的订单</a></li>
+							<li><a href="#" class="top_li">我的订单</a></li>
+							<li><a href="#" class="top_li">我的订单</a></li>
+						</ul>
+					</li>
+					<li class="top_r5 gon">
+						<img src="../images/top_xing.png" class="top_r_img4"/>
+						<a href="#" class="top_r_a5">我的收藏</a>
+						<img src="../images/top_xiabiao.png" class="top_r_img3"/>
+						<ul class="top_u2">
+							<li><a href="#" class="top_r_a6">我的收藏</a></li>
+						</ul>
+					</li>
+					<li class="top_r6 gon">
+						<img src="../images/top_photo.png" class="top_r_img5"/>
+						<a href="#" class="top_r_a7">手机版</a>
+						<ul class="top_u3">
+							<li><img src="../images/top_erweima.png" style="width: 58;height: 58px;"/></li>
+						</ul>
+					</li>
+					<li class="top_r7 gon"><a href="#" class="top_r_a8">问题反馈</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--banners-->
+		<div id="banners">
+			<div class="banners con">
+				<img src="../images/goods_ec.png"/>
+				<input type="button" id="bn_btn" value="搜索" />
+				<input type="text"  id="bn_tx" value="" />
+			</div>
+		</div>
+
+		
+		<div id="m_main">
+           <div class="m_main con">
+               <div class="main_top">
+                   <ul id="main_top_ul">
+                   		<li style="float: left;width: 100px;height: 80px;text-align: center;line-height: 80px;">
+                   			E宠购物车
+                   		</li>
+                   		<li style="float: left;width: 100px;height: 80px;text-align: center;line-height: 80px;">
+                   			国际购物车</li>
+                   		<li style="float: left;width: 100px;height: 80px;text-align: center;line-height: 80px;">
+                   			我的收藏
+                   			<span style="width: 10px;height: 10px; color: red;">0</span>
+                   		</li>
+                   		<li style="float: left;width: 100px;height: 80px;text-align: center;line-height: 80px;">
+                   			我购买过
+                   			<span style="width: 10px;height: 10px; color: red;">0</span>
+                   		</li>
+                   		<li style="float: left;width: 100px;height: 80px;text-align: center;line-height: 80px;">
+                   			最近浏览
+                   			<span style="width: 10px;height: 10px; color: red;">0</span>
+                   		</li>
+                   </ul>
+               </div>
+               <div class="main_top2">
+                   
+               </div>
+
+               <div class="main_car">
+                   <ul id="main_car_ul" >
+                        <li>
+                           <i style="background:url(../images/ma_l_goods1.png) no-repeat;background-size:cover;"></i>
+                           <p class="idx">ID:1</p>
+                           <input class="btn0" type="button" value="-"/><input type="text" class="txt" /><input class="btn" type="button" value="+"/>
+                           <p class="price">$188</p>
+                           <p class="allprice">1880</p>
+                           <a class="btn-close">&times;</a>
+                       </li> 
+                   </ul>
+                   <div id="m_c_b" class="main_car_bottom fl">
+                        <a id="btnPrev" class="fl">返回</a>
+                        <a id="btnClear" class="to_sp fl">清空购物车</a>
+                        <span class="to_cout fr" href="total.html"><a  href="total.html">结算</a> </span>
+                        <p class="total fr">总价（不含运费）￥：<span id="tota">0 </span></p><br /><br />
+                        
+                   </div>
+               </div>  
+           </div>
+       </div>
+
+		<!--footer-->
+		<div class="footer-content">
+			<div class="footer-top">
+				<div class="footer-imgs ct w-max">
+					<ul class="clearfix">
+						<li class="fl">
+							<a class="zp ft18" href="#" target="_blank">绝对的正品</a>
+						</li>
+						<li class="fl">
+							<a class="hh ft18" href="#" target="_blank">全球的好货</a>
+						</li>
+						<li class="fl">
+							<a class="ck ft18" href="#" target="_blank">自家的仓库</a>
+						</li>
+						<li class="fl">
+							<a class="ps ft18" href="#" target="_blank">自家的配送</a>
+						</li>
+						<li class="fl">
+							<a class="bs ft18" href="#" target="_blank">养宠的帮手</a>
+						</li>
+						<li class="fl">
+							<a class="cj ft18" href="#" target="_blank">小小的成绩</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-wrapper">
+				<div class="info clearfix">
+					<div class="footer-phone fl">
+						<img class="fl mt5 dogphone" src="../images/dog_phone.gif">
+						<div class="footer-number fl">
+							<h2 class="ft14 c666 bold">售后电话：</h2>
+							<p class="c666 ft20 mt20">400-888-9200<span class="ml5 ft12">(免长途费)</span></p>
+							<p class="c666 ft20 mt10">023-65584888</p>
+							<p class="c444 ft12 mt10">服务时间：09:00--18:30（周一到周日）</p>
+						</div>
+					</div>
+					<div class="pay-style fl">
+						<h2 class="ft14 c666 bold">支付方式</h2>
+						<p class="ft14 c444 mt20">
+							<a href="#">货到付款</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">余额支付</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">在线支付</a>
+						</p>
+					</div>
+					<div class="peisong-style fl">
+						<h2 class="ft14 c666 bold">配送方式</h2>
+						<p class="ft14 c444 mt20">
+							<a href="#">E宠快递</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">外包快递</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">物流运输</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">公司地址</a>
+						</p>
+					</div>
+					<div class="shopping-guide fl">
+						<h2 class="ft14 c666 bold">购物指南</h2>
+						<p class="ft14 c444 mt20">
+							<a href="#">退换货政策</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">常见问题</a>
+						</p>
+					</div>
+					<div class="about-us fl">
+						<h2 class="ft14 c666 bold">关于我们</h2>
+						<p class="ft14 c444 mt20">
+							<a href="#">关于我们</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">仓储中心</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#">联系我们</a>
+						</p>
+						<p class="ft14 c444 mt5">
+							<a href="#" target="_blank" title="应急响应">应急响应</a>
+						</p>
+					</div>
+					<div class="app-code fl">
+						<p class="ftc ft12">扫描下载APP</p>
+						<p class="ftc ft12">下单更优惠</p>
+						<a href="#" target="_blank"><img src="../images/top_erweima.png" /></a>
+					</div>
+					<div class="wx-code fl">
+						<p class="ftc ft12">扫描关注E宠</p>
+						<p class="ftc ft12">商城微信</p>
+						<img src="../images/top_erweima.png" />
+					</div>
+				</div>
+				<div class="flink c999 rela">
+					<div class="fwrapper overflow">
+						<span class="c999 mr5">友情链接：</span>
+						<span class="brand-link">
+							<a class="c999" href="#" target="_blank">E宠猫用品</a>
+							<a class="c999" href="#" target="_blank">狗粮品牌</a>
+							<a class="c999" href="#" target="_blank">宠物用品</a>
+							<a class="c999" href="#" target="_blank">狗粮价格</a>
+							<a class="c999" href="#" target="_blank">淘狗网</a>
+							<a class="c999" href="#" target="_blank">重庆宠物</a>
+							<a class="c999" href="#" target="_blank">宠物狗</a>
+							<a class="c999" href="#" target="_blank">大连分类信息</a>
+							<a class="c999" href="#" target="_blank">中国宠物网</a>
+							<a class="c999" href="#" target="_blank">钓鱼之家</a>
+							<a class="c999" href="# " target="_blank">罗汉鱼</a>
+							<a class="c999" href="#" target="_blank">海水鱼</a>
+							<a class="c999" href="#" target="_blank">北京宠物</a>
+							<a class="c999" href="#" target="_blank">宠物店加盟</a>
+							<a class="c999" href="#" target="_blank">兽药网</a>
+						</span>
+					</div>
+					<div class="click-arrow abs"><span class="footer-arrow footer-arrow-down"></span></div>
+				</div>
+				<div class="support ftc">
+					<a href="#" target="_blank" title="12315消费维权"><img src="../images/12315.png" alt="12315消费维权"></a>
+					<a href="#" target="_blank" title="360网站安全"><img src="../images/12315.png" alt="360网站安全"></a>
+					<a href="#" target="_blank" title="诚信网站"><img src="../images/12315.png" alt="诚信网站"></a>
+					<a href="#" target="_blank" title="360品牌官网"><img alt="360品牌官网" src="../images/12315.png"></a>
+					<a href="#" target="_blank" title="腾讯安全认证"><img src="../images/12315.png" alt="腾讯安全认证"></a>
+					<a href="#" target="_blank" title="网上交易保障中心"><img alt="网上交易保障中心" src="../images/12315.png"></a>
+					<a href="#" target="_blank" title="重庆工商"><img alt="重庆工商" src="../images/12315.png"></a>
+					<span><img src="../images/12315.png" alt="2013年零售价百强企业"></span>
+					<span><img src="../images/12315.png" alt="重庆网商常务理事"></span>
+					<span><img src="../images/12315.png" alt="重庆电子商务示范企业"></span>
+					<span><img src="../images/12315.png" alt="重庆优秀互联网信息服务企业"></span>
+					<span><img src="../images/12315.png" alt="小动物保护支持单位"></span>
+					<span><img src="../images/12315.png" alt="重庆十佳网商第一"></span>
+				</div>
+				<div class="footer-copy">
+					<p class="ftc ft12">
+						<a href="#">渝ICP备10002905号-1</a>&nbsp;&nbsp;
+						<a href="#">渝ICP备10002905号-3</a>&#12288;增值电信业务经营许可证：渝B2-20140042 Copyright &copy; 2007-2018 epet.com &#12288;重庆易宠科技有限公司</p>
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>
