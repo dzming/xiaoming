@@ -6,7 +6,6 @@
 	$price = isset($_GET["price"])?$_GET["price"]:null;
 	$qty = isset($_GET["qty"])?$_GET["qty"]:null;
 	$goodsname = isset($_GET["goodsname"])?$_GET["goodsname"]:null;
-	
 	$allprice = isset($_GET["allprice"])?$_GET["allprice"]:null;
 //  $gender = isset($_GET["gender"])?$_GET["gender"]:null;
     $register = isset($_GET["register"])?$_GET["register"]:null;
@@ -27,7 +26,7 @@
     $cz = $conn->query('select * from goods where name="'.$name.'" AND uid="'.$uid.'"');
     if($cz->num_rows > 0){
     	var_dump($qty);
-        $xg = $conn->query("update goods set qty='qty+1',allprice='price*qty' where name= $name AND id= $uid");
+        $xg = $conn->query("update goods set qty=qty+1,allprice=price*qty where name= $name AND id= $uid");
         echo "更新成功";
         
     }else{

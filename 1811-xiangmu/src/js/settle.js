@@ -63,34 +63,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 					}).join("");
 					tota.innerHTML=news[0].allprice;
 //					点击增加
-//					$('#main_car_ul').on('click','li .btn',function() {
-//						console.log(news[0].qty);
-//						var val =news[0].qty;
-//						var nama1=news[0].name;
-//						var goodsnama1=news[0].goodsnama;
-//						var imgurl1=news[0].imgurl;
-//						var price1=news[0].price;
-//						var uid1=news[0].uid;
-//				//		console.log(val);
-//						val++;//自增一
-//						if(val >= 100) {//库存量
-//							val = 100;
-//						}
-//						var allprice1=val*price1;
-//						
-//						console.log(allprice1);
-//						var xhr = new XMLHttpRequest();
-//					    var status = [200,304];
-//					    xhr.onreadystatechange = function(){
-//					        if(xhr.readyState == 4 && status.indexOf(xhr.status)!=-1){
-//					      	console.log(xhr.responseText);
-////					            var news=JSON.parse(xhr.responseText);
-//							
-//					        }
-//					    }
-//					    xhr.open("get",`../api/goodsjia.php?name=${nama1}&imgurl=${imgurl1}&goodsname=${goodsnama1}&price=${price1}&qty=${val}&uid=${uid1}&allprice=${allprice1}`,true);
-//		    			xhr.send(null);
-//					});
+					
 
 						
 					
@@ -101,7 +74,34 @@ document.addEventListener('DOMContentLoaded',()=>{
 		    
 		}
 	    chaxuan();
-	   
+	   $('#main_car_ul').on('click','li .btn',function() {
+			console.log(news[0].qty);
+			var val =news[0].qty;
+			var nama1=news[0].name;
+			var goodsnama1=news[0].goodsnama;
+			var imgurl1=news[0].imgurl;
+			var price1=news[0].price;
+			var uid1=news[0].uid;
+	//		console.log(val);
+			val++;//自增一
+			if(val >= 100) {//库存量
+				val = 100;
+			}
+			var allprice1=val*price1;
+			
+			console.log(allprice1);
+			var xhr = new XMLHttpRequest();
+		    var status = [200,304];
+		    xhr.onreadystatechange = function(){
+		        if(xhr.readyState == 4 && status.indexOf(xhr.status)!=-1){
+		      	console.log(xhr.responseText);
+//					            var news=JSON.parse(xhr.responseText);
+				
+		        }
+		    }
+		    xhr.open("get",`../api/goodsjia.php?name=${nama1}&imgurl=${imgurl1}&goodsname=${goodsnama1}&price=${price1}&qty=${val}&uid=${uid1}&allprice=${allprice1}`,true);
+			xhr.send(null);
+		});
 		
 	    var btnsc = document.getElementsByClassName('.btn-close');
 	    btnsc.onclick = function(){

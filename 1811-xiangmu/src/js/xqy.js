@@ -8,12 +8,7 @@ window.onload = function() {
 
 
 	
-	// 获取cookie
-	var goodsarr = Cookie.getCookie("goodslist") || [];
-        if(typeof goodsarr == "string"){
-        goodsarr = JSON.parse(goodsarr);
-    }
-      console.log(goodsarr);
+
 
     // 获取列表页参数信息，并设置详情页
     var sp1 = document.getElementById('sp1');
@@ -35,6 +30,7 @@ window.onload = function() {
 	console.log(imgssd);
 	console.log(goods);
 	//点击添加购物车
+	
 	addCart.onclick = function(){
 		var qty=1;
 		console.log(goods.name);
@@ -45,11 +41,11 @@ window.onload = function() {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
             if(xhr.readyState == 4 && status.indexOf(xhr.status)!=-1){
-                console.log(xhr.responseText);
+//              console.log(xhr.responseText);
 //				alert('添加成功');
             }
         }
-        xhr.open("get",`../api/goodsxq.php?name=${names}&imgurl=${goods.imgurl}&goodsname=${goods.name}&price=${goods.price}&qty=${qty}&uid=${goods.id}&allprice=${goods.price}&register=${register}`,true);
+        xhr.open("get",`../api/goods.php?name=${names}&imgurl=${goods.imgurl}&goodsname=${goods.name}&price=${goods.price}&qty=${qty}&uid=${goods.id}&allprice=${goods.price}&register=${register}`,true);
         xhr.send(null);
 	}
 	
