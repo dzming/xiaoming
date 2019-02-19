@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆</title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<script src="../js/common.js"></script>
+		<script src="../lib/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="background: #f6f6f6;">
+
+		<div class="wrapper">
+			<div class="log_head">
+				<h1 class="log_logo left">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" width="100" height="50" />
+                    <span>欢迎登录</span>
+                </a>
+            </h1>
+			</div>
+			<div class="login_wrap">
+				<div id="logins">
+					<div class="zhuce-tab">
+						<ul>
+							<li class="xz">账号登录</li>
+							<li>手机登录</li>
+						</ul>
+					</div>
+					<div class="regtip right">
+						<a href="res.html" class="gozhuce">账号注册 ></a>
+					</div>
+					<div class="xxknr">
+						<div class="reg" style="display: block;">
+							<dl style="margin-top: 15px;">
+								<dt><img src="../images/iconfont-yonghu.png"/ style="height: 18px;width: 18px;margin-top: 6px;"></dt>
+								<dd>
+									<input type="text" id="usernames" placeholder="用户名/手机号"  style="outline-style: none;padding-left: 5px;box-sizing: border-box;"/>
+								</dd>
+							</dl>
+							<dl>
+								<dt><img src="../images/iconfont-psw.png"/ style="height: 18px;width: 18px;margin-top: 6px;"></dt>
+								<dd>
+									<input type="password" src="../images/iconfont-psw.png left" placeholder="密码" id="userpwd2" style="outline-style: none; padding-left: 5px;box-sizing: border-box;" />
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<input type="checkbox" name="" id="checkbox" class="checkbox" value="" />
+								</dt>
+								<dd>
+									<input type="submit" id="phonecode2" value="三个月内免登录" style="width: 240px;outline-style: none;" />
+								</dd>
+							</dl>
+							<dl>
+								<dd>
+									<button  id="regbut2">登录</button>
+								</dd>
+							</dl>
+							<div class="qita">
+								<p>其他方式登录九机</p>
+								<a href="#">找回密码</a>
+							</div>
+							<div class="fashi">
+								<div class="xtb">
+									<a href="#" class="a1"></a>
+									<a href="#" class="a2"></a>
+								</div>
+								<div class="erw">
+									
+								</div>
+							</div>
+						</div>
+						<div class="reg" style="display: none;">
+							<dl>
+								<dt><img src="../images/iconfont-shouji.png"/ style="height: 18px;width: 18px;margin-top: 6px;"></dt>
+								<dd>
+									<input type="text" id="usermobile" placeholder="手机号码" style="outline-style: none;"/>
+								</dd>
+							</dl>
+							<dl>
+								<dt><img src="../images/iconfont-psw.png"/ style="height: 18px;width: 18px;margin-top: 6px;"></dt>
+								<dd>
+									<input type="text" id="phonecode" style="width: 120px;outline-style: none;" />
+									<a class="btn" id="getCode" href="#">
+										<span id="dyMobileButton">获取短信验证码</span></a>
+								</dd>
+							</dl>
+
+							<dl>
+								
+								<dd>
+									<button onclick="Register()" id="regbut">登录</button>
+								</dd>
+							</dl>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="TB_overlayBG"></div>
+		<div class="bottom">
+			<div class="wrapper">
+				<div class="foot_nav">
+					<a href="#">常见问题</a><i>|</i>
+					<a href="#">供应商申请</a><i>|</i>
+					<a href="#">在线支付</a><i>|</i>
+					<a href="#">配送方式</a><i>|</i>
+					<a href="#">招聘信息</a><i>|</i>
+					<a href="#">品牌专区</a><i>|</i>
+					<a href="#">关于我们</a><i>|</i>
+					<a href="#">联系我们</a><i>|</i>
+					<a href="#">网站地图</a><i>|</i>
+					<a href="#">地区报价</a>
+					<i>|</i>
+					<a href="#">加盟招商</a>
+					<i>|</i>
+					<a href="#">IT服务</a>
+				</div>
+				<div class="copy">
+					<p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+
+					<p>网站ICP备案号：
+						<a rel="nofollow" target="_blank">滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; 云南网警ICP备案 53010303402252 &nbsp;&nbsp;&nbsp;&nbsp; </p>
+					<p>Copyright © 2006 - 2019 云南叁玖网络科技有限公司（九机网），All Rights Reserved</p>
+				</div>
+				<div class="bot-link">
+					<a class="shiming" logo_size="0" logo_type="realname"></a>
+					<a class="wangjian" target="_blank" title="云南网监电子标识" alt="云南网监电子标识"></a>
+					<a class="wangjing" target="_blank"></a>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.login_wrap li').click(function() {
+					//排他
+					$('.login_wrap li').attr('class', '');
+					$('.login_wrap .reg').css('display', 'none');
+					$(this).attr('class', 'xz');
+					$('.login_wrap .reg').eq($(this).index()).css('display', 'block');
+				});
+			});
+		</script>
+	</body>
+
+</html>

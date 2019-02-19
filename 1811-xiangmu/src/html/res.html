@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>注册 </title>
+		<link type="text/css" href="../css/main.css" rel="stylesheet" />
+		<link href="../css/res.css" rel="stylesheet" />
+		<script src="../js/res.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.login_wrap {
+				background: #fff url(../images/reg_bg.png) no-repeat right center;
+				border: solid 8px #f0f0f0;
+				min-height: 340px;
+				margin-bottom: 20px;
+				padding-bottom: 30px;
+			}
+		</style>
+	</head>
+
+	<body style="background: #f6f6f6;">
+		<div class="wrapper">
+			<div class="log_head">
+				<h1 class="log_logo left">
+                <a href="../index.html">
+                    <img src="../images/new-logo.png" width="100" height="50" />
+                    <span>新用户注册</span>
+                </a>
+            </h1>
+			</div>
+			<div class="login_wrap">
+				<div class="zhuce-tab">
+					<ul>
+						<li class="xz">快速注册</li>
+						<li>账号注册</li>
+					</ul>
+				</div>
+				<div class="regtip right">已有九机网账号？现在就
+					<a href="login.html">登录</a>
+				</div>
+				<div class="xxknr">
+					<div class="reg" style="display: block;">
+						<dl>
+							<dt><i>*</i>手机号码</dt>
+							<dd>
+								<input type="text" id="usermobile" style="outline-style: none;"/>
+								<em>手机号码非常重要，找回密码及购物都会用到</em>
+							</dd>
+						</dl>
+						<dl>
+							<dt><i>*</i>短信验证码</dt>
+							<dd>
+								<input type="text" id="phonecode" style="width: 120px;outline-style: none;" />
+								<a class="btn" id="getCode" href="#">
+									<span id="dyMobileButton">获取短信验证码</span></a>
+							</dd>
+						</dl>
+						<dl>
+							<dt></dt>
+							<dd>
+								<input name="" id="mmprovision" type="checkbox" checked="checked" style="margin-right: 5px; vertical-align: middle;" />
+								<label for="mmprovision" style="color: #999;">我已认真阅读并同意
+                            	<a href="#" target="_blank" style="color: #39f; margin: 0 5px;">《九机网用户协议》</a>
+                            </label>
+							</dd>
+						</dl>
+						<dl>
+							<dt></dt>
+							<dd>
+								<button onclick="Register()" id="regbut">提交注册</button>
+							</dd>
+						</dl>
+					</div>
+					<div class="reg" style="display: none;">
+						<dl>
+							<dt><i>*</i>用户名</dt>
+							<dd>
+								<input type="text" id="userUID" onblur=" CheckUser() " style="outline-style: none;"/><em class="tips">4-16位字母、数字或汉字，请不要输入特殊字符！</em>
+							</dd>
+						</dl>
+						<dl>
+							<dt><i>*</i>密码</dt>
+							<dd>
+								<input type="password" id="userpwd3" style="outline-style: none;"/><em>6个字符以上的字母或数字</em>
+							</dd>
+						</dl>
+						<dl>
+							<dt><i>*</i>重复密码</dt>
+							<dd>
+								<input type="password" id="userpwd4" style="outline-style: none;"/><em>请重复输入密码确认不会输错</em>
+							</dd>
+						</dl>
+
+						<!--<dl>
+                        <dt><i>*</i>手机号码</dt>
+                        <dd>
+                            <input type="text" id="usermobile2" /><em>手机号码非常重要，找回密码及购物都会用到</em>
+                        </dd>
+                    </dl>-->
+						<!--<dl>
+                        <dt>邮箱地址</dt>
+                        <dd>
+                            <input type="text" id="usermail" /><em>请填写邮箱，用于找回密码</em>
+                        </dd>
+                    </dl>-->
+
+						<!--<dl>
+							<dt><i>*</i>验证码</dt>
+							<dd>
+								<input type="text" id="phonecode2" style="width: 120px;" />
+								<a class="btn" id="getCode2" href="#">
+									<span id="dyMobileButton2">获取短信验证码</span></a>
+							</dd>
+						</dl>-->
+						<dl>
+							<dt></dt>
+							<dd>
+								<input name="" id="mmprovision2" type="checkbox" checked="checked" style="margin-right: 5px; vertical-align: middle;" />
+								<label for="mmprovision" style="color: #999;">我已认真阅读并同意
+                            	<a href="#" class="showyhzt" style="color: #39f; margin: 0 5px;">《九机网用户协议》</a>
+                            </label>
+							</dd>
+						</dl>
+						<dl>
+							<dt></dt>
+							<dd>
+								<button onclick=" Register2() " id="regbut2">提交注册</button>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="TB_overlayBG"></div>
+		<div class="bottom">
+			<div class="wrapper">
+				<div class="foot_nav">
+					<a href="#">常见问题</a><i>|</i>
+					<a href="#">供应商申请</a><i>|</i>
+					<a href="#">在线支付</a><i>|</i>
+					<a href="#">配送方式</a><i>|</i>
+					<a href="#">招聘信息</a><i>|</i>
+					<a href="#">品牌专区</a><i>|</i>
+					<a href="#">关于我们</a><i>|</i>
+					<a href="#">联系我们</a><i>|</i>
+					<a href="#">网站地图</a><i>|</i>
+					<a href="#">地区报价</a>
+					<i>|</i>
+					<a href="#">加盟招商</a>
+					<i>|</i>
+					<a href="#">IT服务</a>
+				</div>
+				<div class="copy">
+					<p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+
+					<p>网站ICP备案号：
+						<a rel="nofollow" target="_blank">滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; 云南网警ICP备案 53010303402252 &nbsp;&nbsp;&nbsp;&nbsp; </p>
+					<p>Copyright © 2006 - 2019 云南叁玖网络科技有限公司（九机网），All Rights Reserved</p>
+				</div>
+				<div class="bot-link">
+					<a class="shiming" logo_size="0" logo_type="realname"></a>
+					<a class="wangjian" target="_blank" title="云南网监电子标识" alt="云南网监电子标识"></a>
+					<a class="wangjing" target="_blank"></a>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.login_wrap li').click(function() {
+					//排他
+					$('.login_wrap li').attr('class', '');
+					$('.login_wrap .reg').css('display', 'none');
+					$(this).attr('class', 'xz');
+					$('.login_wrap .reg').eq($(this).index()).css('display', 'block');
+				});
+			});
+		</script>
+	</body>
+
+</html>

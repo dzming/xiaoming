@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/xqy.css"/>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/xqy.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+	        img{
+	            border:none;
+	        }
+	        #ampBox{
+	            /*height:172px;*/
+	            width:400px;
+	            float: left;
+	            
+	            border:1px solid #ccc;
+	            margin:0 20px 0 20px;
+	            position:relative;
+	        }
+	        .imgBox{
+	            overflow:hidden;
+	            position:absolute;
+	            left:600px;
+	            top:225px;
+	            height:400px;
+	            width:400px;
+	            display:none;
+	            border:1px solid #ccc;
+	            overflow:hidden;
+	        }
+	        #ampBox img,.imgBox img{
+	            display:block;
+	            width:100%;
+	        }
+	        .sp{
+	            display:none;
+	            position:absolute;
+	            top:0;
+	            left:0;
+	            border:1px solid #ccc;
+	        }
+
+	    </style>
+		<script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+	    <script type="text/javascript">
+	        jQuery(function($){
+	            var $ampBox=$("#ampBox");
+	            var $img=$("#ampBox img");
+	            var $sp=$(".sp");
+	            var $imgBox=$(".imgBox");
+	            var $imgBig=$(".imgBox img");
+	            $ampBox.on("mouseover",function(){
+	                $sp.css("display","block");
+	                $imgBox.css("display","block"); 
+	            }).on("mouseout",function(){
+	                $sp.css("display","none");
+	                $imgBox.css("display","none"); 
+	            }).on("mousemove",function(e){
+	                var scale=3;
+	                $sp.css({width:$ampBox.outerWidth()/scale,height:$ampBox.outerHeight()/scale});
+	                $imgBig.attr("src",$img[0].src).css({width:$ampBox.outerWidth()*scale});
+	                var $ox=e.pageX-$ampBox[0].offsetLeft-$sp.outerWidth()/2;
+	                var $oy=e.pageY-$ampBox[0].offsetTop-$sp.outerHeight()/2;
+	                if($ox<=0){
+	                    $ox=0
+	                }else if($ox>=$ampBox.outerWidth()-$sp.outerWidth()){
+	                    $ox=$ampBox.outerWidth()-$sp.outerWidth();
+	                }
+	                if($oy<=0){
+	                    $oy=0
+	                }else if($oy>=$ampBox.outerHeight()-$sp.outerHeight()){
+	                    $oy=$ampBox.outerHeight()-$sp.outerHeight();
+	                }
+	                $sp.css({left:$ox,top:$oy});
+	                $imgBig.css({marginTop:-$oy*scale,marginLeft:-$ox*scale});
+	
+	            })
+	        })
+	    </script>
+	</head>
+	<body>
+		<div id="top">
+			<div class="top con">
+				<div class="top-weizhi fl" style="display:block;">
+					<a href="#" class="top-city" ><img src="../images/weizhi.png"/>市辖区<em></em></a>
+				</div>
+				<div class="top-login fl">
+					<p style="display: block;" id="top_p1">Hi，欢迎来九机！
+						<a href="login.html">登录</a>
+						<a href="res.html">免费注册</a>
+					</p>
+					<p style="display: none;" id="top_p2">Hi，你好！
+						<a id="yonghu" href="#">用户</a>
+						<a href="#" id="tuichu">退出</a>
+					</p>
+				</div>
+				<ul class="top-menu fr">
+					<li class="top-l1 fl u1" >个人中心<i class="triangle-down"></i>
+						<ul class="u2">
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的积分</a></li>
+							<li><a href="#">我的试用</a></li>
+							<li><a href="#">我的收藏</a></li>
+							<li><a href="#">我的咨询</a></li>
+						</ul>
+					</li>
+					<li class="u1"><i class="vip"></i><p>会员俱乐部</p></li>
+					<li class="u1">帮助中心</li>
+					<li class="u1"><img src="../images/iconfont-shouji.png" class="kehu"/>客户端
+						<div class="erwei">
+							<img src="../images/gunzhu-jiuji.png" class="img1"/>
+							<ul>
+								<li>Android</li>
+								<li>iPhoto</li>
+								<li>触屏版</li>
+							</ul>
+							<p>扫描二维码下载</p>
+						</div>
+					</li>
+					<li class="u1">在线客服</li>
+					<li class="u1">网站导航
+						<ul class="daohan">
+							<li>
+								<p>九机特色</p>
+								<ul class="u3">
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+								</ul>
+							</li>
+							<li>
+								<p>九机特色</p>
+								<ul class="u3">
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+								</ul>
+							</li>
+							<li>
+								<p>九机特色</p>
+								<ul class="u3">
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+								</ul>
+							</li>
+							<li>
+								<p>九机特色</p>
+								<ul class="u3">
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+								</ul>
+							</li>
+							<li>
+								<p>九机特色</p>
+								<ul class="u3">
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+									<li>附近门店</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="u1"><i class="jubao"></i>不良信息举报</li>
+					<li class="u1"><i class="dh"></i>0871-68393939</li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav">
+			<div class="nav con">
+				<div class="n_l">
+					<img src="../images/list_logo.png" class="img2" href="../index.html"/>
+					<span></span>
+					<p>广州市区</p>
+					<h4>全场免邮配送</h4>
+					<h2>全部商品分类</h2>
+				</div>
+				<div class="n_t">
+					<div class="t_lf">
+						<input type="text"  id="inp1" value="" placeholder="iPhoto x5"/>
+						<input type="button" id="botn1" value="搜索" />
+						<p>热门搜索：</p>
+						<ul class="u4">
+							<li><a href="#">vivo NEX 双屏版</a></li>
+							<li><a href="#">华为</a></li>
+							<li><a href="#">华为</a></li>
+							<li><a href="#">华为</a></li>
+							<li><a href="#">华为</a></li>
+						</ul>
+					</div>
+					<div class="t_rg">
+						<div class="rg_r"><img src="../images/shopping.png" class="img3"/>购物车<i class="rg_tb">5</i></div>
+					</div>
+				</div>
+				<div class="n_b">
+					<ul class="u5">
+						<li><a href="../index.html">首页</a></li>
+						<li><a href="#">旧机回收</a></li>
+						<li><a href="#">一手优品</a></li>
+						<li><a href="#">二手良品</a></li>
+						<li>
+							<a href="#">售后维修</a>
+							<ul class="u6">
+								<li><a href="#">售后公告</a></li>
+								<li><a href="#">常见问题</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">九机头条</a>
+							<ul class="u7">
+								<li><a href="#">行内资讯</a></li>
+								<li><a href="#">数码测评</a></li>
+								<li><a href="#">手机导购</a></li>
+							</ul>
+						</li>
+						<li><a href="#">人气排行</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="denter">
+			<div class="denter con">
+				<div class="dentert">
+					<ul class="dentert_u">
+						<li><img src="../images/weizhi.png"/>首页</li><span>/</span>
+						<li>手机通讯</li><span>/</span>
+						<li style="width: 40px;">手机</li><span>/</span>
+						<li style="width: 40px;">荣耀</li><span>/</span>
+						<li style="width: 140px;">华为 荣耀畅玩7全网通版</li>
+					</ul>
+				</div>
+				<div class="denterl">
+					<div id="ampBox">
+				        <img src="../images/01.png" id="sp1"/>
+				        <span class="sp"></span>
+				    </div>
+				    <div class="imgBox">
+				        <img/>
+				    </div>
+					<div class="box1">
+						<span><</span>
+						<ul>
+							<a href="#"><img src="../images/01_small.png" id="sp"/></a>
+						</ul>
+						<span>></span>
+					</div>
+					<div class="denterl_b">
+						<img src="../images/fada_bg.png"/>
+					</div>
+				</div> 
+				<div class="denterr">
+					<h2 id="mingzi">华为 荣耀畅玩7网通版 黑色 2GB+16GB</h2>
+					<div class="denterr_d1">
+						<img src="../images/denterr_d1.png"/>
+					</div>
+					<div class="denterr_d2">
+						【全面屏小身材】智能听筒，独立三卡褲，+级美颜
+					</div>
+					<div class="denterr_d3">
+						<p>九机价：<span id="jiage">¥599.00</span> [价格走势] [降价通知]</p>
+						<img src="../images/haoping.png"/>
+					</div>
+					<p class="p1">配置信息：<span>充电器x1，数据线x1（内置3020mAn电池）</span></p>
+					<div class="denterr_d4">
+						<h3>颜色：</h3>
+						<a href="#"><img src="../images/shouji_min.png"/>黑色</a>
+						<a href="#"><img src="../images/shouji_min.png"/>金色</a>
+						<a href="#"><img src="../images/shouji_min.png"/>蓝色</a>
+					</div>
+					<div class="denterr_d4">
+						<h3>版本： </h3>
+						<a href="#"><img src="../images/shouji_min.png"/>全网遥版</a>
+						<a href="#"><img src="../images/shouji_min.png"/>4G+全网通版</a>
+					</div>
+					<div class="denterr_d5">
+						<h4>配送至：</h4>
+						<input type="text" name="" id="" value="" placeholder="广东省广州市广州市区"/>
+						<p>（预订现在下单，预计02月23日（周六）12:00前送达因配送地址不同，送达时间以订单显示为准</p>
+						<a href="#">查询范围</a>
+					</div>
+					<div class="denterr_d6">
+						<h4>九机服务：</h4>
+						<input type="button" name="" id="" value="电池保2年¥29" placeholder="电池保2年¥29 "/>
+						<input type="button" name="" id="" value="碎屏保1年¥59" placeholder="碎屏保1年¥59"/>
+						<input type="button" name="" id="" value="延长保1年¥49" placeholder="延长保1年¥49"/>
+						<input type="button" name="" id="" value="意外保2年¥99" placeholder="意外保2年¥99"/>
+						<p>据统计有46.7%的手机在质保期内会因为意外失去保修，为此60%以上九机网客户选择了九机</p>
+						<a href="#">服务详情</a>
+					</div>
+					<div class="denterr_b">
+						<a href="javascript:;" id="addCart">加入购物车</a>
+						<a href="javascript:;">立即购买</a>
+						<a href="settle.html">去购物车</a>
+					</div>
+				</div> 
+				<div class="denterb">
+					<input class="active" type="button"  id="denterb_inp1" value="超值优惠配件" style="width: 150px;"/>
+					<input type="button"  id="denterb_inp1" value="人气配件（3）" />
+					<input type="button"  id="denterb_inp2" value="数据线（1）" />
+					<input type="button"  id="denterb_inp3" value="充电器（1）" />
+					<input type="button"  id="denterb_inp4" value="移动电源（5）" />
+					<p></p>
+					<div class="con" style="display: block;">
+						<img src="../images/chaozhi.png"/>
+					</div>
+					<div class="con">
+						<img src="../images/renqi.png"/>
+					</div>
+					<div class="con">
+						<img src="../images/shujuxian.png"/>
+					</div>
+					<div class="con">
+						<img src="../images/chongdianqi.png"/>
+					</div>
+					<div class="con">
+						<img src="../images/yidongdianyuan.png"/>
+					</div>
+				</div> 
+				
+			</div>
+		</div>
+		<div id="imgs">
+			<div class="imgs con af">
+				<div class="imgs_l">
+					<img src="../images/imgs_l.png"/>
+				</div>
+				<div class="imgs_r">
+					<div class="imgs_r_t">
+						<img src="../images/imgs_r.png"/>
+					</div>
+					<div class="imgs_r_c">
+						<p id="imgs_p1"><img src="../images/imgs_bg1.jpg"/></p>
+						<p id="imgs_p2"><img src="../images/imgs_bg2.jpg.webp.jpg"/></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footers">
+			<div class="footers con">
+				<ul class="footers_t">
+					<li>
+						<img src="../images/jiujitu.png"/>
+						<a href="#">新九机 心生态</a>
+						<h2>全新九机 用心可见</h2>
+					</li>
+					<li>
+						<img src="../images/jiujitu.png"/>
+						<a href="#">新九机 心生态</a>
+						<h2>全新九机 用心可见</h2>
+					</li>
+					<li>
+						<img src="../images/jiujitu.png"/>
+						<a href="#">新九机 心生态</a>
+						<h2>全新九机 用心可见</h2>
+					</li>
+					<li>
+						<img src="../images/jiujitu.png"/>
+						<a href="#">新九机 心生态</a>
+						<h2>全新九机 用心可见</h2>
+					</li>
+					<li>
+						<img src="../images/jiujitu.png"/>
+						<a href="#">新九机 心生态</a>
+						<h2>全新九机 用心可见</h2>
+					</li>
+				</ul>
+				<div class="footers_b">
+					<div class="footers_b_lf">
+						<ul class="footers_u1">
+							<h2>新手指南</h2>
+							<li><a href="#">会员注册与使用</a></li>
+							<li><a href="#">九机测评</a></li>
+							<li><a href="#">积分介绍</a></li>
+						</ul>
+						<ul class="footers_u1">
+							<h2>新手指南</h2>
+							<li><a href="#">会员注册与使用</a></li>
+							<li><a href="#">九机测评</a></li>
+							<li><a href="#">积分介绍</a></li>
+						</ul>
+						<ul class="footers_u1">
+							<h2>新手指南</h2>
+							<li><a href="#">会员注册与使用</a></li>
+							<li><a href="#">九机测评</a></li>
+							<li><a href="#">积分介绍</a></li>
+						</ul>
+						<ul class="footers_u1">
+							<h2>新手指南</h2>
+							<li><a href="#">会员注册与使用</a></li>
+							<li><a href="#">九机测评</a></li>
+							<li><a href="#">积分介绍</a></li>
+						</ul>
+						<ul class="footers_u1">
+							<h2>新手指南</h2>
+							<li><a href="#">会员注册与使用</a></li>
+							<li><a href="#">九机测评</a></li>
+							<li><a href="#">积分介绍</a></li>
+						</ul>
+					</div>
+					<div class="footers_b_rg">
+						<img src="../images/weixin.png"/ class="footers_b_rg_img1">
+						<a href="#"><img src="../images/weibo.png" class="footers_b_rg_img2"/></a>
+						<a href="#"><img src="../images/weibo.png" class="footers_b_rg_img3"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bottom">
+			<div class="bottom con">
+				<ul class="bottom_u1">
+					<li><a href="#">常见问题</a></li><span>|</span>
+					<li><a href="#">供应商申请</a></li><span>|</span>
+					<li><a href="#">配送方式</a></li><span>|</span>
+					<li><a href="#">招聘信息</a></li><span>|</span>
+					<li><a href="#">关于我们</a></li><span>|</span>
+					<li><a href="#">联系我们</a></li><span>|</span>
+					<li><a href="#">投诉建议</a></li><span>|</span>
+					<li><a href="#">地区报价</a></li><span>|</span>
+					<li><a href="#">IT服务</a></li>
+				</ul>
+				<ul class="bottom_u2">
+					<li>各门店营业时间：周一至周日09:00-21:30</li>
+					<li>全国服务热线：400-008-3939 0871-68393939</li>
+					<li>工作时间：周一至周日09:00-21:30</li>
+				</ul>
+				<ul class="bottom_u3">
+					<li>网站C备案号：滇ICP06002001号</li>
+					<li>电信业务经营许可证：滇B2-20180054号</li>
+					<li>滇公网安备53010202000261号</li>
+				</ul>
+				<h3>Copyright @ 2006-2019 九机网   All Rights Reserved</h3>
+				<h4>云南九机信息技术有限公司版权所有</h4>
+				<ul class="bottom_u4">
+					<li><img src="../images/botpic1c.jpg" /></li>
+					<li><img src="../images/bottom_large_img.png" /></li>
+					<li><img src="../images/sm_124x47.png" /></li>
+					<li><img src="../images/2018071814373837.png" /></li>
+					<li><img src="../images/wanjing.png" /></li>
+					<li><img src="../images/landui.jpg" /></li>
+				</ul>
+				<ul class="bottom_u5">
+					<h5>友情链接 </h5>
+					<li>装修网</li>
+					<li>花粉俱乐部</li>
+					<li>安卓游戏下载</li>
+					<li>192.168.1.1</li>
+					<li>9.9包邮</li>
+					<li>汽车世界网</li>
+					<li>甜椒刷机</li>
+					<li>PS教程</li>
+					<li>zippo打火机</li>
+					<li>手机频道</li>
+					<li>村安商域</li>
+					<a href="#">更多</a>
+				</ul>
+			</div>
+		</div>
+		<script src="../lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.denterb input').click(function() {
+					//排他
+					$('.denterb input').attr('class','');
+					$('.denterb .con').css('display','none');
+					$(this).attr('class','active');
+					$('.denterb .con').eq($(this).index()).css('display','block');
+					
+				});
+			});
+		</script>
+
+	</body>
+</html>
