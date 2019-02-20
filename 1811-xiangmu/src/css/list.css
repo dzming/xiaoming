@@ -84,7 +84,7 @@
   display: none;
   position: absolute;
   top: 30px;
-  left: 632px;
+  left: 625px;
   width: 55px;
   background: white;
   border-left: 1px solid gainsboro;
@@ -146,7 +146,7 @@
   display: none;
   position: absolute;
   top: 30px;
-  left: 700px;
+  left: 692px;
   width: 240px;
   height: 130px;
   border-left: 1px solid gainsboro;
@@ -194,7 +194,7 @@
   display: none;
   position: absolute;
   top: 30px;
-  left: 165px;
+  left: 158px;
   width: 1200px;
   height: 180px;
   border-left: 1px solid gainsboro;
@@ -365,6 +365,7 @@
   float: right;
   margin-top: 25px;
   font-size: 12px;
+  color: #333333;
 }
 
 .nav .n_t .t_rg .rg_r .img3 {
@@ -373,6 +374,7 @@
 }
 
 .nav .n_t .t_rg .rg_r .rg_tb {
+	display: none;
   background: red;
   width: 20px;
   height: 20px;
@@ -423,7 +425,7 @@
   width: 64px;
   position: absolute;
   top: 176px;
-  left: 752px;
+  left: 745px;
   border: 1px solid gainsboro;
   z-index: 9;
   background: white;
@@ -448,7 +450,7 @@
   width: 64px;
   position: absolute;
   top: 176px;
-  left: 845px;
+  left: 838px;
   border: 1px solid gainsboro;
   z-index: 9;
   background: white;

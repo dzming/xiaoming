@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-02-19 11:04:35
+Date: 2019-02-20 19:49:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,12 +29,11 @@ CREATE TABLE `goods` (
   `allprice` decimal(10,2) NOT NULL,
   `qty` int(5) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of goods
 -- ----------------------------
-INSERT INTO `goods` VALUES ('6', '1', 'xiaoming', '../images/mr_bg1.png', 'Apple iPhone X 全网通版 银色 64GB【新春专享价】1.16-2.11爆款特...', '5960.00', '5960.00', '1');
 
 -- ----------------------------
 -- Table structure for goodsleft

@@ -9,6 +9,7 @@
 		<script src="../lib/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/settle.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -129,7 +130,7 @@
 		</div>
 		<div id="bgs">
 			<div class="bgs con">
-				<a href="#"><img src="../images/settle.png"/></a>
+				<a href="../index.html"><img src="../images/settle.png"/></a>
 			</div>
 		</div>
 		<div id="m_main">
@@ -151,43 +152,48 @@
 				</div>
 
 				<div class="main_car">
-					<ul id="main_car_ul">
-<!--						
-						<li>
-							<i style="background:url(../images/mr_bg1.png) no-repeat;background-size:cover;"></i>
-							<p class="idx">ID:1</p>
-							<p class="price">$188</p>
-							<p class="youhui">0.00</p>
-							<input class="btn0" type="button" value="-" onclick="jian()"/><input type="text" class="txt" /><input class="btn" type="button" value="+" />
-							<p class="allprice">1880</p>
-							<a class="btn-close">&times;</a>
-						</li>-->
-						
+					<ul id="cart">
 						<!--<li>
-							<i style="background:url(../images/mr_bg1.png) no-repeat;background-size:cover;"></i>
-							<p class="idx">ID:1</p>
-							<p class="price">$188</p>
-							<p class="youhui">0.00</p>
-							<input class="btn0" type="button" value="-" /><input type="text" class="txt" /><input class="btn" type="button" value="+" />
-							<p class="allprice">1880</p>
-							<a class="btn-close">&times;</a>
-						</li>
-						<li>
-							<i style="background:url(../images/mr_bg1.png) no-repeat;background-size:cover;"></i>
-							<p class="idx">ID:1</p>
-							<p class="price">$188</p>
-							<p class="youhui">0.00</p>
-							<input class="btn0" type="button" value="-" onclick="jian()"/><input type="text" class="txt" /><input class="btn" type="button" value="+" />
-							<p class="allprice">1880</p>
-							<a class="btn-close">&times;</a>
+							<p class="good_check"><input type="checkbox" name="good" value="" /></p>
+							<p class="good_img" style="background:url(../images/mr_bg1.png) no-repeat;background-size:cover;"></p>
+							<p class="good_name">sfsfasgfajgfasugfuasgfsagfugasufgasfuisagfuisagifugsaiugfiasug</p>
+							<p class="good_price">99.99</p>
+							<p class="good_youhui">0.00</p>
+							<p class="num">
+								<span class="cutnum">-</span>
+								<input class="nownum" type="text" value="1" />
+								<span class="addnum">+</span>
+							</p>
+							<p class="good_total">99.99</p>
+							<p class="good_del">
+								<a href="javascript:;">删除</a>
+							</p>
+						</li>-->
+						<!--<li>
+							<p class="good_check"><input type="checkbox" name="good" value="" /></p>
+							<p class="good_img" style="background:url(../images/mr_bg1.png) no-repeat;background-size:cover;"></p>
+							<p class="good_name">sfsfasgfajgfasugfuasgfsagfugasufgasfuisagfuisagifugsaiugfiasug</p>
+							<p class="good_price">99.99</p>
+							<p class="good_youhui">0.00</p>
+							<p class="num">
+								<span class="cutnum">-</span>
+								<input class="nownum" type="text" value="1" />
+								<span class="addnum">+</span>
+							</p>
+							<p class="good_total">99.99</p>
+							<p class="good_del">
+								<a href="javascript:;">删除</a>
+							</p>
 						</li>-->
 					</ul>
-					<div id="m_c_b" class="main_car_bottom fl">
-						<a id="btnPrev" class="fl">返回</a>
-						<a id="btnClear" class="to_sp fl">清空购物车</a>
-						<span class="to_cout fr" ><a  href="#">结算</a> </span>
-						<p class="total fr">总价（不含运费）￥：<span id="tota">0 </span></p><br /><br />
-
+					<div id="del">
+						<p id="allchecked"><input type="checkbox" name="" id="" value="" />全选</p>
+						<p id="delall">
+							<a href="javascript:;">删除</a>
+						</p>
+						<p id="allnum">已选 0 件商品</p>
+						<p id="totalprice">总计（不含运费）：￥0.00</p>
+						<input type="button" name="" id="allgoods" value="结算" />
 					</div>
 				</div>
 			</div>

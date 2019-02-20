@@ -43,7 +43,7 @@ $(function() {
 	//3.小计的运算：单价*数量
 	function goodTotal(now) {
 		//找单价
-		var price = now.parent().prev().text().substring(2) * 1;
+		var price = now.parent().prev().prev().text() * 1;
 		
 		//找数量
 		var num = now.parent().find('input').val() * 1;
@@ -62,13 +62,31 @@ $(function() {
 		var res = confirm('您确定要删除吗？');
 		if(res) {
 			$(this).parent().remove();
+//			var btnClear=document.getElementById("btnClear");
+		    function shanchu3(){
+		    	var names = Cookie.getCookie("uname");
+		    	console.log(names);
+		    	var status = [200,304];
+				var register = true;
+		        var xhr = new XMLHttpRequest();
+		        xhr.onreadystatechange = function(){
+		            if(xhr.readyState == 4 && status.indexOf(xhr.status)!=-1){
+		                console.log(xhr.responseText);
+						alert('删除成功');
+						chaxuan();
+		            }
+		        }
+		        xhr.open("get",`../api/goodssc.php?name=${names}`,true);
+		        xhr.send(null);
+		    }
+		    shanchu3();
 			update();//判断是否删完了
 			NumPrice();
 		}
 	});
 	
 	function update() {
-		if($('.addnum').size() == 0) {
+		if($('.addnum').length == 0) {
 			//已结删完所有的行，没有必要保留总价了
 			$('#del').css('display','none');
 		}
@@ -84,13 +102,13 @@ $(function() {
 	var arr = [];//存被选中的行的下标数
 	function NumPrice() {
 		arr = [];
-		for(var i = 0; i < $('.good_check input').size(); i++) {
+		for(var i = 0; i < $('.good_check input').length; i++) {
 			if($('.good_check input').eq(i).prop('checked')) {
 				arr.push(i);
 			}
 		}
 		
-		if(arr.length == $('.good_check input').size()) {
+		if(arr.length == $('.good_check input').length) {
 			//所有商品被选中了，控制权限勾上
 			$('#allchecked input').prop('checked','checked');
 		}else{
@@ -103,13 +121,13 @@ $(function() {
 		
 		for(var i = 0; i < arr.length; i++) {
 			numAll += $('.nownum').eq(arr[i]).val() * 1;
-			priceAll += $('.good_total').eq(arr[i]).text().substring(2) * 1;
+			priceAll += $('.good_total').eq(arr[i]).text().substring(1) * 1;
 		}
 		
 //		console.log(numAll);
-//		console.log(priceAll);
+		console.log(priceAll);
 		$('#allnum').html('已选 '+numAll+' 件商品');
-		$('#totalprice').html('总计（不含运费）：￥' + priceAll.toFixed(2));
+		$('#totalprice').html('总计（不含运费）：' + priceAll.toFixed(2));
 	}
 	
 	
@@ -133,6 +151,22 @@ $(function() {
 			for(var i = arr.length -1 ; i >= 0 ; i--) {//从尾部开始删除
 				console.log(arr[i] + 1);
 				$('#cart li').eq(arr[i] + 1).remove();
+				function shanchu2(){
+			    	var names = Cookie.getCookie("uname");
+			    	console.log(names);
+			    	var status = [200,304];
+					var register = true;
+			        var xhr = new XMLHttpRequest();
+			        xhr.onreadystatechange = function(){
+			            if(xhr.readyState == 4 && status.indexOf(xhr.status)!=-1){
+			                console.log(xhr.responseText);
+							window.location.href="settle改.html";
+			            }
+			        }
+			        xhr.open("get",`../api/goodssc.php?name=${names}`,true);
+			        xhr.send(null);
+			    }
+			    shanchu2();
 				update();
 				NumPrice();
 			}
